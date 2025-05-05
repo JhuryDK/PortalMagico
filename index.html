@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal Mágico</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer; /* Aplica o cursor de clique ao corpo inteiro */
+    }
+
+    img {
+      cursor: pointer;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Estilos para a mensagem */
+    .message {
+      position: absolute;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      animation: typing 10s steps(100) forwards; /* Reduzido o tempo da animação */
+    }
+
+    /* Animação de máquina de escrever */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Para esconder o texto extra além da largura da animação de máquina de escrever */
+    .message span {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(50) forwards; /* Reduzido o tempo da animação */
+    }
+
+    /* Envolvendo todo o conteúdo com o link */
+    a {
+      display: flex;
+      flex-direction: column; /* Organiza os elementos na direção vertical */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-decoration: none; /* Remove o sublinhado do link */
+    }
+  </style>
+</head>
+<body>
+  <!-- Link agora envolve todo o conteúdo da página -->
+  <a href="https://forms.gle/UQPF73qPqxji2XoM6" target="_blank">
+    <!-- Mensagem com o efeito de máquina de escrever -->
+    <div class="message">
+      <span>Bem-Vindo(a) ao Mundo Magico!</span>
+    </div>
+    <img src="circulomagico.gif" alt="Círculo Mágico">
+  </a>
+</body>
+</html>
